@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: #111827;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Consolas, "Courier New", monospace;
+}
+
+.terminal {
+    width: 90%;
+    max-width: 1100px;
+    height: 700px;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    border: 1px solid #333;
+}
+
+.top-bar {
+    height: 45px;
+    background: #252526;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+    padding-left: 15px;
+}
+
+.buttons span {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    display: block;
+}
+
+.red {
+    background: #ff5f56;
+}
+
+.yellow {
+    background: #ffbd2e;
+}
+
+.green {
+    background: #27c93f;
+}
+
+.title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ccc;
+    font-size: 14px;
+}
+
+.terminal-output {
+    height: calc(100% - 85px);
+    padding: 20px;
+    overflow-y: auto;
+    color: #f1f1f1;
+    font-size: 15px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.welcome {
+    color: #9cdcfe;
+}
+
+.welcome span {
+    color: #4ec9b0;
+}
+
+.input-line {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px 10px 20px;
+    color: #4ec9b0;
+    font-size: 15px;
+}
+
+#prompt {
+    margin-right: 8px;
+    white-space: nowrap;
+}
+
+#command-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+    caret-color: #4ec9b0;
+}
+
+.command {
+    color: #4ec9b0;
+}
+
+.output {
+    color: #f1f1f1;
+}
+
+.error {
+    color: #ff6b6b;
+}
+
+@media (max-width: 700px) {
+    .terminal {
+        width: 95%;
+        height: 90vh;
+    }
+
+    .terminal-output {
+        font-size: 13px;
+    }
+
+    .input-line {
+        font-size: 13px;
+    }
+
+    #command-input {
+        font-size: 13px;
+    }
+}

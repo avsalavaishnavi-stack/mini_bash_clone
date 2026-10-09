@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Bash Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="terminal">
+        <div class="top-bar">
+            <div class="buttons">
+                <span class="red"></span>
+                <span class="yellow"></span>
+                <span class="green"></span>
+            </div>
+            <div class="title">Mini Bash Clone</div>
+        </div>
+
+        <div id="terminal-output" class="terminal-output">
+            <div class="welcome">
+                Mini Bash Clone
+                <br>
+                Type <span>help</span> to see available commands.
+                <br><br>
+            </div>
+        </div>
+
+        <div class="input-line">
+            <span id="prompt">user@mini-bash:~$</span>
+            <input
+                type="text"
+                id="command-input"
+                autocomplete="off"
+                autofocus
+            >
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
