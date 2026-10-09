@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Bash Clone</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
@@ -18,11 +18,13 @@
             <div class="title">Mini Bash Clone</div>
         </div>
 
-        <div id="terminal-output" class="terminal-output">
+        <div id="terminal-output" class="terminal-output" role="log" aria-live="polite" aria-label="Terminal output">
             <div class="welcome">
                 Mini Bash Clone
                 <br>
                 Type <span>help</span> to see available commands.
+                <br>
+                Your isolated workspace is saved for this browser. This is a virtual shell.
                 <br><br>
             </div>
         </div>
@@ -33,11 +35,15 @@
                 type="text"
                 id="command-input"
                 autocomplete="off"
+                spellcheck="false"
+                aria-label="Terminal command"
+                maxlength="4096"
+                disabled
                 autofocus
             >
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 </body>
 </html>
